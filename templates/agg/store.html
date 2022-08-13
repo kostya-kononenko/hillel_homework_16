@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Count all store - {{ count_store }}</p>
+
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+<table border="1">
+        <tr>
+            <td><p><strong>Store name</strong></p></td>
+        </tr>
+    {% for i in pop %}
+        <tr>
+        <td> <p>
+            <a href="{% url 'agg_store:store_books' i.id %}">{{ i.name }} -- {{ i.number_of_books}} books, average price book-- {{ i.average_price }}</a>
+        </p>
+        </td>
+    {% endfor %}
+</table>
+
+</body>
+</html>

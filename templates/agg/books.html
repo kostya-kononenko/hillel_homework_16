@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+<table border="2">
+    <tr>
+        <td> Short information of books </td>
+        <td>
+    <h4>Total books:  {{ all_book }}</h4>
+    <h4>AVG price books:  {{ avg_price }}</h4>
+    <h4>MAX price books:  {{ max_price }}</h4>
+    <h4>MIN price books:  {{ min_price }}</h4>
+        </td>
+    </tr>
+</table>
+
+<a href="{% url 'agg_store:books_list' %}"> <h3>List of books </h3>
+
+</body>
+</html>

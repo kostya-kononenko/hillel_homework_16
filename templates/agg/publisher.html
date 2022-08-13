@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All about publisher</title>
+</head>
+<body>
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+<h4>Total publishers - {{ pub_all }} </h4>
+    <table border="1">
+    <tr>
+        <td>Name of publishers</td>
+    </tr>
+    {% for p in pub_select%}
+        <tr>
+        <td><a href="{% url 'agg_store:publisher_all_book' p.publisher.id %}">{{ p.publisher.name }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

@@ -11,7 +11,6 @@ class ChoiceInline(admin.TabularInline):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('question_text', 'pub_date', 'was_published_recently', 'example')
-
     fieldsets = [
         (None,               {'fields': ['question_text']}),
         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
@@ -26,3 +25,4 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Choice)
+

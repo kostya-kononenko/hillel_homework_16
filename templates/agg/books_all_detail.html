@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books detail</title>
+</head>
+<body>
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+    <p>Book ID: {{ book_id }}</p>
+    <p>Book name: {{ book_name }}</p>
+    <p>Book author: {{ books_author }}</p>
+    <p>Book price: {{ books_price }}</p>
+    <p>Book pages: {{ books_pages }}</p>
+    <p>Book rating: {{ books_rating }}</p>
+    <p>Book date: {{ books_pubdate }}</p>
+    <p>Book publisher: {{ books_publisher }}</p>
+</body>
+</html>

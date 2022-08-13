@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information about authors</title>
+</head>
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+<p>All authors - {{ author }}</p>
+<p>Average age of authors - {{ avg_author }}</p>
+
+<p><a href="{% url 'agg_store:author_book_min' min_author.age__min%}"> List of young author </a></p>
+
+<p><a href="{% url 'agg_store:author_book_max' max_author.age__max%}"> List of old author </a></p>
+
+</body>
+</html>

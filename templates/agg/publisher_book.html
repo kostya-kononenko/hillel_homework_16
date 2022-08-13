@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All about book of publisher</title>
+</head>
+<body>
+<p>List of book of this publisher</p>
+<h4>Total books of this publisher- {{ count_book }} </h4>
+
+<h3><a href="{% url 'agg_store:index'%}"> Home </a></h3>
+    <table border="1">
+    <tr>
+        <td>Name of books</td>
+    </tr>
+        {% for i in pub_books %}
+            <tr>
+           <td> {{ i.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

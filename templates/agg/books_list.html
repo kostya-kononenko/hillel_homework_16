@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<h3>
+    <a href="{% url 'agg_store:index'%}"> Home </a>
+</h3>
+<ul>
+<table border="1">
+        <tr>
+            <td><p><strong>Books name</strong></p></td>
+        </tr>
+    {% for inf in books %}
+        <tr>
+        <td><a href="{% url 'agg_store:books_detail' inf.id %}"> {{ inf.name }}</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</ul>
+</body>
+</html>
+
+

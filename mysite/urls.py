@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from triangle.views import new_index
+from agg.views import index
 
 urlpatterns = [
-    path('', new_index, name='index'),
+    path('', include('agg.urls')),
     path('triangle/', include('triangle.urls')),
     path('codebase/', include('codebase.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]

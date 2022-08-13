@@ -1,6 +1,7 @@
 import random
 
 from agg.models import Book
+
 from django.core.management.base import BaseCommand
 
 from faker import Faker

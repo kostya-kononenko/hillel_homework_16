@@ -1,6 +1,6 @@
 from agg.models import Author, Book, Publisher, Store
 
-from django.db.models import Avg, Count, Min, Max
+from django.db.models import Avg, Count, Max, Min
 from django.shortcuts import render
 
 

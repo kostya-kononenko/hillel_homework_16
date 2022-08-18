@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = os.environ.get("DJANGO_SECRET")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -152,9 +152,8 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_BROKER_URL = "redis://localhost:6379/0"
 CELERY_BEAT_SCHEDULE = {
-        "example_task": {
-            "task": "polls.tasks.add",
-            "schedule": crontab(minute=0, hour='*/3'),
-            "args": (1, 2),
-        }
+    "parsing": {
+        "task": "robot.tasks.robot_author_quote",
+        "schedule": crontab(minute=0, hour="1-23/2"),
+    }
 }

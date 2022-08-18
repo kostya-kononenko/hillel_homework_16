@@ -18,7 +18,8 @@ from django.urls import include, path
 
 
 urlpatterns = [
-    path('', include('agg.urls')),
+    path('', include('robot.urls')),
+    path('agg/', include('agg.urls')),
     path('triangle/', include('triangle.urls')),
     path('codebase/', include('codebase.urls')),
     path('polls/', include('polls.urls')),

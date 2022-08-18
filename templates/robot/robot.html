@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information for robot</title>
+</head>
+<body>
+<p><a href="{% url 'robot:home' %}">Home</a></p>
+<form action="{% url 'robot:robot' %}" method="post">
+    {% csrf_token %}
+    {{ robot_form.as_p }}
+    <input type="submit" name="submit" value="OK">
+</form>
+</body>
+</html>

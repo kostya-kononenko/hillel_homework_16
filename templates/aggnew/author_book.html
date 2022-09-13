@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>information about the youngest author</h3>
+<ul>
+    {% for author in author_books %}
+        <p>
+            <a href="{% url 'aggnew:author'%}"> {{ author }} </a>
+        </p>
+    {% endfor %}
+</ul>
+<h5>
+    <a href="{% url 'aggnew:index'%}"> Home </a>
+</h5>
+</body>
+</html>

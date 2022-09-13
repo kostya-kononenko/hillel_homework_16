@@ -1,0 +1,9 @@
+{% extends 'aggnew/base.html' %}
+
+{% block content %}
+<h1>{{ object.name }}</h1>
+<h3>
+       <a href="{% url 'aggnew:publisher-update' publisher.pk%}"> <p>update</p></a>
+        <a href="{% url 'aggnew:publisher-delete' publisher.pk%}"> <p>delete</p></a>
+</h3>
+{% endblock %}

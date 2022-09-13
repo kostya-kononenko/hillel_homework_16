@@ -1,0 +1,14 @@
+{% extends 'aggnew/base.html'%}
+{% block content %}
+<h1>Publishers</h1>
+<ul>
+    {% for publisher in object_list %}
+        <li>
+            <a href="{% url 'aggnew:publisher-detail' publisher.pk%}"> <p>{{ publisher.name }}</p></a>
+        </li>
+    {% endfor %}
+</ul>
+<h4>
+    <a href="{% url 'aggnew:publisher-create' %}">Publisher Create</a>
+</h4>
+{% endblock %}

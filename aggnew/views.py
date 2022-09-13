@@ -176,3 +176,31 @@ class AuthorDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy("aggnew:author-list")
     success_message = 'Author Delete Was Successfully'
     template_name = "aggnew/author_delete.html"
+
+
+class PublisherDetailView(DetailView):
+    model = Publisher
+
+
+class PublisherListView(ListView):
+    model = Publisher
+    paginate_by = 20
+    ordering = ['name']
+
+
+class PublisherCreateView(CreateView):
+    model = Publisher
+    fields = ['name']
+
+
+class PublisherUpdateView(UpdateView):
+    model = Publisher
+    fields = ['name']
+    template_name = "aggnew/publisher_update.html"
+
+
+class PublisherDeleteView(DeleteView):
+    model = Publisher
+    success_url = reverse_lazy("aggnew:publisher-list")
+    success_message = 'Publisher Delete Was Successfully'
+    template_name = "aggnew/publisher_delete.html"
